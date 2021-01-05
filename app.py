@@ -36,6 +36,7 @@ def check_if_token_in_blacklist(decrypted_token):
         decrypted_token["jti"] in BLACKLIST
     )  # Here we blacklist particular JWTs that have been created in the past.
 
+
 api.add_resource(Store, "/store/<string:name>")
 api.add_resource(StoreList, "/stores")
 api.add_resource(Item, "/item/<string:name>")
